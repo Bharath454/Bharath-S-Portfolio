@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    :root {
+      --bg-color: #f0f0f3;
+      --text-color: #1c1c1c;
+      --card-bg: rgba(255, 255, 255, 0.15);
+      --accent: #7c3aed;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="light"] {
+      --bg-color: #121212;
+      --text-color: #f3f3f3;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --shadow: rgba(255, 255, 255, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Space Grotesk', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: 2rem;
+      line-height: 1.6;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3rem;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+    }
+
+    .toggle-theme {
+      border: none;
+      height: fit-content;
+      background: var(--accent);
+      color: white;
+      padding:12px;
+      font-size: 1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 10px var(--shadow);
+    }
+
+    .projects {
+      display: grid;
+      gap: 2rem;
+      margin-top: 40px;
+     
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .project-card {
+      backdrop-filter: blur(12px);
+      background: var(--card-bg);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 32px var(--shadow);
+      animation: fadeIn 1s ease forwards;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    .project-card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .project-title {
+      font-size: 1.4rem;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+
+    .project-desc {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      opacity: 0.9;
+    }
+
+    .project-links a {
+      color: var(--accent);
+      text-decoration: none;
+      margin-right: 1rem;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+    .fas{
+      color: #7c3aed;
+    }
+     </style>
+</head>
+<body>
+
+  <div style="display: flex;justify-content: space-between;align-items: center;">
+
+      <h1 style="margin-left: 550px;">My Projects</h1>
+      <button class="toggle-theme" onclick="toggleTheme()">Toggle Theme</button>
+  </div>
+  
+
+  <section class="projects">
+    <div class="project-card">
+      <div class="project-title">Tripadvisor</div>
+      <div class="project-desc">A responsive TripAdvisor clone to explore places, read reviews, and share travel experiences.</div>
+      <div class="project-links">
+       
+        <p  onclick="redirectToProject('file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/tripadvisor/login.html')"  class="fas">Live</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Whatsapp Clone</div>
+      <div class="project-desc">A real-time chat app replicating WhatsApp features like messaging, contacts, and status .</div>
+      <div class="project-links">
+        
+        <p onclick="redirectToProject('file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/wa%20web/chatbox.html')"  class="fas">Live</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">ATM Card Generator</div>
+      <div class="project-desc">Generates valid-looking ATM card details for testing, including card numbers, CVV, and expiry.</div>
+      <div class="project-links">
+        <p  onclick="redirectToProject('file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/atm%20card/index.html')"  class="fas">Live</p>
+      </div>
+    </div>
+    <div class="project-card">
+      <div class="project-title">PetAdoption</div>
+      <div class="project-desc">A user-friendly platform to browse pets, submit adoption requests, and connect with shelters, designed with love.</div>
+      <div class="project-links">
+        <p onclick="redirectToProject('file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/atm%20card/index.html')"  class="fas">Live</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Student Registration</div>
+      <div class="project-desc">Manage student Biodata, profiles efficiently in one web portal for schools or colleges</div>
+      <div class="project-links">
+         <p onclick="redirectToProject('file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/javascript/studentdetails.html')"  class="fas">Live</p>
+      </div>
+    </div>
+
+
+    <div class="project-card">
+      <div class="project-title">TodoList</div>
+      <div class="project-desc">A minimal and efficient to-do list app with task creation, editing, and deletion.</div>
+      <div class="project-links">
+         <p onclick="redirectToProject('file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/javascript/todolist.html')"  class="fas">Live</p>
+      </div>
+    </div>
+
+
+    <div class="project-card">
+      <div class="project-title">Grocery Site</div>
+      <div class="project-desc">A simple Grocery Store we can click and select the items and we can order it my OR.</div>
+      <div class="project-links">
+         <p onclick="redirectToProject('file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/javascript/grocery.html')"  class="fas">Live</p>
+      </div>
+    </div>
+
+
+    <div class="project-card">
+      <div class="project-title">Increment Game</div>
+      <div class="project-desc">We can increment and Decrement the numbers.</div>
+      <div class="project-links">
+         <p onclick="redirectToProject('file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/javascript/game.html')"  class="fas">Live</p>
+      </div>
+    </div>
+
+
+    <div class="project-card">
+      <div class="project-title">Form Entry</div>
+      <div class="project-desc">we can entry a list of details and display it line by line.</div>
+      <div class="project-links">
+         <p onclick="redirectToProject('file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/javascript/form.html')"  class="fas">Live</p>
+      </div>
+    </div>
+
+
+    <div class="project-card">
+      <div class="project-title">Guess the Number</div>
+      <div class="project-desc">It is a number guessing gameradom number will be generated you must find.</div>
+      <div class="project-links">
+         <p onclick="redirectToProject('file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/javascript/guessgame.html')"  class="fas">Live</p>
+      </div>
+    </div>
+
+
+    <div class="project-card">
+      <div class="project-title">Traffic Light</div>
+      <div class="project-desc">We can play with the Traffic by changing the signals.</div>
+      <div class="project-links">
+         <p onclick="redirectToProject('file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/javascript/traffic.html')"  class="fas">Live</p>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <div class="project-title">Family Memories</div>
+      <div class="project-desc">We can Upload all the family memory as a image and give the specific event and description.</div>
+      <div class="project-links">
+         <p onclick="redirectToProject('file:///C:/Users/prave/OneDrive/Desktop/NAVEEN/javascript/Memories.html')"  class="fas">Live</p>
+      </div>
+    </div>
+
+  
+  </section>
+
+  <script>
+    function toggleTheme() {
+      const html = document.documentElement;
+      const current = html.getAttribute('data-theme');
+      html.setAttribute('data-theme', current === 'light' ? 'dark' : 'light');
+    }
+
+    // Reveal cards on scroll
+    const cards = document.querySelectorAll('.project-card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+
+    function redirectToProject(url) {
+   window.open(url, '_blank'); // Opens the URL in a new tab
+}
+  </script>
+
+</body>
+</html>

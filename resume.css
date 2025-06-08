@@ -1,0 +1,141 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    line-height: 1.6;
+    background-color: #fafafa;
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    background-color: #2d3e50;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 3.5em;
+    font-weight: 600;
+    color: #f39c12;
+}
+
+header .tagline {
+    font-size: 1.4em;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover {
+    color: #f39c12;
+    border-bottom: 2px solid #f39c12;
+}
+
+/* Section Styling */
+section {
+    padding: 60px 0;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    font-weight: 600;
+    border-bottom: 3px solid #f39c12;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+}
+
+ul li {
+    margin-bottom: 25px;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+/* Project Section Styling */
+#projects ul li {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+#projects ul li:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#projects a {
+    color: #f39c12;
+    font-weight: 500;
+}
+
+#projects a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Section */
+#contact p {
+    font-size: 1.2em;
+}
+
+#contact a {
+    color: #2d3e50;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+    color: #f39c12;
+}
+
+/* Footer Styling */
+footer {
+    background-color: #2d3e50;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 1em;
+}

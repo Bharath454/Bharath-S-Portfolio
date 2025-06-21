@@ -170,7 +170,7 @@ footer {
 .first{
     position: absolute;
     left: 290px;
-   margin-bottom: 20px;
+    margin-bottom: 20px;
     
 }
 
@@ -181,7 +181,6 @@ footer {
    font-size: 20px;
    margin-right: 120px;
    align-items: center;
-
 }
 
 .anchor:hover{
@@ -211,7 +210,6 @@ footer {
     justify-content: space-between;
     height: 130px;
     position: relative;
-
 }
 
 .para{
@@ -220,8 +218,7 @@ footer {
     font-family: 'Times New Roman', Times, serif;
     letter-spacing:1px;
     line-height: 25px;
-    text-transform: capitalize;
-    
+    text-transform: capitalize; 
 }
 
 

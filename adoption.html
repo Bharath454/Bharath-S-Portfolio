@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adopt a Pet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+
+    h1 {
+      text-align: center;
+      color: #444;
+    }
+
+    form {
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      max-width: 600px;
+      margin: auto;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .instructions {
+      background-color: #fff8dc;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      border: 1px dashed #e6b800;
+    }
+
+    .checkbox-group {
+      margin-top: 15px;
+    }
+
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      margin-top: 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Start Your Pet Adoption Journey 🐾</h1>
+
+  <form id="adoptionForm" onsubmit="return handleSubmit()">
+    <label for="name">Full Name *</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email Address *</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="phone">Phone Number *</label>
+    <input type="tel" id="phone" name="phone" required />
+
+    <label for="pet">Select a Pet *</label>
+    <select id="pet" name="pet" required>
+      <option value="">-- Choose a Pet --</option>
+      <option value="Dog">Dog 🐶</option>
+      <option value="Cat">Cat 🐱</option>
+      <option value="Parrot">Parrot 🦜</option>
+      <option value="Rabbit">Rabbit 🐰</option>
+      <option value="Hamster">Hamster 🐹</option>
+    </select>
+
+    <label for="reason">Why do you want to adopt this pet?</label>
+    <textarea id="reason" name="reason" rows="4" placeholder="Share your thoughts..." required></textarea>
+
+    <div class="instructions">
+      <strong>Important Instructions:</strong>
+      <ul>
+        <li>✔ Ensure you have time and space for your pet.</li>
+        <li>✔ A home visit might be scheduled before approval.</li>
+        <li>✔ You must be 18 years or older to adopt.</li>
+        <li>✔ Keep your pet healthy with regular vet checkups.</li>
+      </ul>
+    </div>
+
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="agree" required /> I have read and agree to the instructions above *</label>
+    </div>
+
+    <button type="submit">Submit Adoption Form</button>
+  </form>
+
+  <script>
+    function handleSubmit() {
+      alert("Thank you for submitting! We will contact you shortly.");
+      return true; // In real apps, you'd send data to backend
+    }
+  </script>
+
+</body>
+</html>

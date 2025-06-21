@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Browse Pet</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f7f7;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+
+    .search-filter {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    input,
+    select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+
+    .pet-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .pet-card {
+      background: white;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s;
+    }
+
+    .pet-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .pet-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .pet-card h3 {
+      margin: 10px 0 5px;
+      color: #333;
+    }
+
+    .pet-card p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    .upload-img {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Adopt a Pet</h1>
+
+  <div class="search-filter">
+    <input type="text" id="searchInput" placeholder="Search by name or breed...">
+    <select id="filterType">
+      <option value="All">All Types</option>
+      <option value="Dog">Dog</option>
+      <option value="Cat">Cat</option>
+      <option value="Parrot">Parrot</option>
+    </select>
+  </div>
+
+  <div class="pet-list" id="petList">
+    <!-- Pet cards will be injected here -->
+  </div>
+
+  <script>
+    const pets = [
+      { name: "Maxy", type: "Dog", description: "Friendly Labrador looking for a home.", image: "https://placedog.net/400/300?id=1" },
+      { name: "Bitto", type: "Dog", description: "Loyal German Shepherd, well trained.", image: "https://placedog.net/400/300?id=2" },
+      { name: "Charlie", type: "Dog", description: "Playful Golden Retriever puppy.", image: "https://placedog.net/400/300?id=3" },
+      { name: "Sprinky", type: "Hamster", description: "Loves spinning on the wheel.", image: "https://loremflickr.com/400/300/hamster?lock=7" },
+      { name: "Charlass", type: "Dog", description: "Playful Golden Retriever puppy.", image: "https://placedog.net/400/300?id=3" },
+      { name: "Squral", type: "Hamster", description: "Loves spinning on the wheel.", image: "https://loremflickr.com/400/300/hamster?lock=7" },
+      { name: "robert", type: "Dog", description: "Friendly Labrador looking for a home.", image: "https://placedog.net/400/300?id=1" },
+      { name: "Bella", type: "Dog", description: "Loyal German Shepherd, well trained.", image: "https://placedog.net/400/300?id=2" },
+      { name: "Popat", type: "Dog", description: "Playful Golden Retriever puppy.", image: "https://placedog.net/400/300?id=3" },
+      { name: "Stuvat", type: "Hamster", description: "Loves spinning on the wheel.", image: "https://loremflickr.com/400/300/hamster?lock=7" },
+
+
+    ];
+
+
+    const petList = document.getElementById("petList");
+    const searchInput = document.getElementById("searchInput");
+    const filterType = document.getElementById("filterType");
+
+    function renderPets() {
+      const search = searchInput.value.toLowerCase();
+      const filter = filterType.value;
+
+      const filteredPets = pets.filter(pet => {
+        const matchesType = filter === "All" || pet.type === filter;
+        const matchesSearch = pet.name.toLowerCase().includes(search) || pet.description.toLowerCase().includes(search);
+        return matchesType && matchesSearch;
+      });
+
+      petList.innerHTML = filteredPets.map(pet => `
+        <div class="pet-card">
+          <img src="${pet.image}" alt="${pet.name}">
+          <h3>${pet.name} (${pet.type})</h3>
+          <p>${pet.description}</p>
+          <div class="upload-img">
+            <label>
+              <strong>Upload New Image:</strong><br>
+              <input type="file">
+            </label>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    searchInput.addEventListener("input", renderPets);
+    filterType.addEventListener("change", renderPets);
+
+    // Initial render
+    renderPets();
+  </script>
+
+</body>
+
+</html>

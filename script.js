@@ -1,23 +1,51 @@
-function redirectToProject(url) {
-   window.open(url, '_blank'); // Opens the URL in a new tab
-}
+document.addEventListener("DOMContentLoaded", () => {
+    const container = document.querySelector(".container");
+    const formTitle = document.getElementById("form-title");
+    const username = document.getElementById("username");
+    const password = document.getElementById("password");
+    const confirmPassword = document.getElementById("confirm-password");
+    const submitBtn = document.getElementById("submit-btn");
+    const toggleBtn = document.getElementById("toggle-btn");
 
-function handleimg(){
-   var nave=document.querySelector(".nave2")
-   
-}
+    let isSignup = false;
 
+    toggleBtn.addEventListener("click", () => {
+        isSignup = !isSignup;
 
-const roles = ["Frontend Developer </>", " Velammal College Student", "Cybersecurity Enthusiast *"];
-let index = 0;
-
-function changeRole() {
-  const roleElement = document.getElementById("role");
-  roleElement.textContent = `I am a ${roles[index]}`;
-  index = (index + 1) % roles.length;
-}
-
-setInterval(changeRole, 1100); // Change every 1 second
+        if (isSignup) {
+            formTitle.textContent = "Sign Up";
+            submitBtn.textContent = "Sign Up";
+            confirmPassword.classList.remove("hidden");
+            toggleBtn.textContent = "Back to Login";
+            container.classList.add("signup-mode");
+        } else {
+            formTitle.textContent = "Login";
+            submitBtn.textContent = "Login";
+            confirmPassword.classList.add("hidden");
+            toggleBtn.textContent = "Sign Up";
+            container.classList.remove("signup-mode");
+        }
+    });
+var dashboard = document.createElement('a')
+    submitBtn.addEventListener("click", () => {
+        if (isSignup) {
+            if (password.value !== confirmPassword.value) {
+                alert("Passwords do not match!");
+                return;
+            }
+            localStorage.setItem(username.value, password.value);
+            alert("Signup successful! Please log in.");
+            toggleBtn.click();
+        } else {
+            const storedPassword = localStorage.getItem(username.value);
+            if (storedPassword && storedPassword === password.value) {
+            window.location.href="index.html"
+            } else {
+                alert("Invalid username or password.");
+            }
+        }
+    });
+});
 
 
 

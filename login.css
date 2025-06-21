@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: WHITE;
+     background-image: no-repeat;
+    transition: all 0.5s ease-in-out;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    width: 60%;
+    position: relative;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    background-image: url("images/logo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    position: absolute;
+    left: 10%;
+    transition: all 0.7s ease-in-out;
+    
+}
+
+.form-box {
+    width: 300px;
+    height: 350px;
+    padding: 20px;
+    background-color: rgb(244, 240, 240);
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: absolute;
+    right: 10%;
+    transition: all 0.7s ease-in-out;
+    text-align: center;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#submit-btn {
+    background-color: #28a745;
+    color: white;
+}
+
+#toggle-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+
+/* When switching to signup */
+.signup-mode .logo {
+    left: 80%;
+}
+
+.signup-mode .form-box {
+    right: auto;
+    left: 10%;
+}

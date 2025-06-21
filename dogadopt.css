@@ -1,0 +1,475 @@
+.navebar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-inline-start: 30px;
+    margin-inline-end: 50px;
+    margin-top: 30px;
+
+}
+
+.huddlefon{
+    font-size: 35px;
+    margin-left: 10px;
+
+}
+.fmimg{
+    height: 120px;
+    width: 220px;
+    border-radius: 100px 40px 100px 40px;
+    rotate: -13deg;
+    margin-right: 50px;
+    margin-top: 15px;
+    
+}
+.topbutton{
+    color:hsl(322, 79%, 5%) ;
+    font-weight: 600;
+    background:  linear-gradient(to bottom right, #111300, #FFC94D, #FFB300, #080a01);;
+    width: 150px;
+    border: 3px black solid;
+    box-shadow: 1px 5px 5px 0px  rgb(102, 109, 2) ;
+    border-radius: 20px;
+    padding: 10px 10px;
+    margin-left: 50px;
+    margin-top: 0px;
+  
+}
+
+.pets{
+    height: 40px;
+    width: 170px;
+    margin-top:-50px;
+    margin-left: 35px;
+    
+
+}
+
+.btnimg{
+    display: flex;
+    flex-direction: column;
+}
+
+.bulid1{
+    margin-top: 120px;
+   margin-left: 330px;
+   
+    
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.birds {
+  background-color: #f5c75d;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 15px;
+  display: none;
+  position: absolute;
+  width: 150px;
+  top: 100%;
+  left: 0;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.3); /* Inner shadow */
+}
+
+.dropdown:hover .birds {
+  display: block;
+}
+
+.bulid2{
+   margin-left: 350px;
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+.flexname{
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+
+.flexnames{
+    font-size: medium;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:  #161001ed;
+    background-color: transparent;
+    border: transparent;
+    border-radius: 15px;
+    font-weight: bold;
+    padding: 10px;
+   
+}
+
+.flexnames:hover{
+     background-color: #FFC94D;
+     
+}
+
+.bulid3{
+    margin-left: 450px;
+    margin-top: 30px;
+
+}
+
+
+.bulidpara{
+    width:450px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(96, 94, 94);
+    margin: 0px;
+    
+
+}
+.bulidbut{
+    color: rgb(18, 2, 2);
+    font-weight: 700;
+     background:  linear-gradient(to bottom right, #111300,#FFC94D, #FFB300, #080a01);;
+    width: 250px;
+    border: 3px hsl(324, 60%, 5%) solid;
+    border-radius: 20px;
+    padding: 10px 10px;
+    box-shadow: 5px 5px 5px 0px  rgb(102, 109, 2) ;
+    
+
+}
+.mockimg{
+    display:flex;
+    justify-content: center;
+    margin-top: 50px;
+    border-radius: 30px;
+    
+}
+
+.mockimg2{
+    border-radius: 50px 50px 50px 50px;
+    box-shadow: 10px 10px 10px 0px  rgb(85, 47, 111);
+    
+}
+.img{
+    height: 500px;
+}
+
+
+
+
+
+
+
+.ready{
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+    margin-top: 500px;
+}
+.readybut{
+    display: flex;
+    justify-content: center;
+
+}
+.but2{
+    color: white;
+    font-weight: 700;
+    background-color:hsl(322, 100%, 66%) ;
+    width: 250px;
+    border: 3px hsl(304, 95%, 50%) solid;
+    border-radius: 20px;
+    padding: 10px 10px;
+    box-shadow: 2px 2px 4px 0px rgb(94, 30, 139);
+}
+.footer{
+    /* height: 500px; */
+    margin-left: 70px;
+    border-radius: 500px 500px 500px 500px;
+    /* width: 90%; */
+    background-color: hsl(192, 100%, 9%);
+    margin-top: 50px;
+    margin-right: 70px;
+    /* box-shadow: 20px 20px 200px 2000px  rgb(213, 172, 241); */
+
+    
+
+}
+.topclr{
+    margin-left: 5px;
+}
+.footer1{
+    display: flex;
+    align-items: center;
+    gap: 200px;
+    margin-left: 150px;
+    margin-top: 100px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    padding-top: 100px;
+}
+.para1{
+    width: 30em;
+    font-size: smaller;
+}
+.fothead1{
+    font-size: 35px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.fothead2{
+    font-size: 17px;
+}
+.call{
+    color: white;
+    font-size: 15px;
+}
+.pcall{
+    display: flex;
+    gap: 15px;
+}
+.textinput{
+    height: 30px;
+    width: 170px;
+    border-radius: 5px;
+}
+.sub{
+    color: white;
+    background-color: hsl(322, 100%, 66%) ;
+    width: 100px;
+    height: 34px;
+    border: 3px  hsl(322, 100%, 66%) solid;
+    border-radius: 6px;
+    font-weight: 600;
+}
+.footer2{
+    display: flex;
+    align-items: center;
+   
+    margin-top: 10px;
+    justify-content: space-evenly;
+    gap: 200px;
+    padding-bottom: 100px;
+    margin-right: 260px;
+   
+}
+.subs{
+    display: flex;
+    gap: 15px;
+    
+}
+/* Section styling */
+.community-section {
+  background: url('images/dogcat.jpg') no-repeat center center/cover;
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+}
+
+.community-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.community-content p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+
+.cta-button {
+  background-color: #ff6f61;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  positionxed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+  background-color: white;
+  margin: auto;
+  padding: 30px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #333;
+  animation: fadeIn 0.4s ease;
+}
+
+.modal h3 {
+  margin-bottom: 20px;
+}
+
+.modal-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.modal-card {
+  flex: 1 1 40%;
+  background: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.close-btn {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .modal-card {
+    flex: 1 1 100%;
+  }
+}
+
+.app{
+    color: white;
+}
+
+.growimg{
+    height: 260px;
+    width: 260px;
+    border-radius: 1000px 10000px 1000px 1000px;
+    border: 5px rgb(94, 30, 139) solid;
+    box-shadow: 5px 5px 25px 5px  rgb(187, 109, 243);
+}
+
+.growimg1{
+    height: 260px;
+    width: 260px;
+    border-radius: 10000px 1000px 1000px 1000px;
+    border: 5px  rgb(94, 30, 139)  solid;
+    box-shadow: 5px 5px 25px 5px  rgb(187, 109, 243)
+}
+
+.growimg2{
+    height: 260px;
+    width: 260px;
+    border-radius: 1000px 10000px 1000px 1000px;
+    border: 5px   rgb(94, 30, 139) solid;
+    box-shadow: 5px 5px 25px 5px  rgb(187, 109, 243)
+}
+
+.grow{
+    background-color: rgb(210, 173, 236);
+    height: 280px;
+    width: 65%;
+    margin-left: 30px;
+    border-radius: 5% 30% 30% 5%;
+    margin-top: 100px;
+    border: 5px   rgb(211, 151, 253) solid;
+    position: relative;
+    box-shadow: 8px 8px 8px  0px black;
+}
+
+.growchild1{
+    position: absolute;
+    top: 5px;
+    left: 10px;
+}
+
+.growchild2{
+    position: absolute;
+    top: 45px;
+    right: 70px;
+    color:rgb(94, 30, 139) ;
+}
+.growpara1{
+    width: 30em;
+    font-size: 18px;
+    font-family:cursive ;
+}
+.growhead{
+    font-size: 30px;
+    margin: 10px;
+    margin-right:70px;
+    font-family:fantasy;
+}
+
+.grow1{
+    background-color: rgb(210, 173, 236);
+    height: 280px;
+    width: 65%;
+    margin-left: 480px;
+    border-radius: 30% 5% 5% 30%;
+    margin-top: 80px;
+    border: 5px   rgb(211, 151, 253) solid;
+    box-shadow: 8px 8px 8px 0px black;
+    position: relative;
+}
+
+.grow1child1{
+    position: absolute;
+    top: 5px;
+    right: 7px;
+}
+
+.grow1child2{
+    position: absolute;
+    top: 50px;
+    left: 100px;
+    color:rgb(94, 30, 139) ;
+}
+
+
+
+
+
+
+
+
+
+.grow2{
+    background-color: rgb(210, 173, 236);
+    height: 280px;
+    width: 65%;
+    margin-left: 30px;
+    border-radius: 5% 30% 30% 5%;
+    margin-top: 80px;
+    border: 5px   rgb(211, 151, 253) solid;
+    box-shadow: 8px 8px 8px 0px black;
+    position: relative;
+}
+
+.grow2child1{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.grow2child2{
+    position: absolute;
+    top: 45px;
+    right: 70px;
+    color:rgb(94, 30, 139) ;
+}
+.appimg{
+    height: 30px;
+    width: 30px;
+    color:aliceblue ;
+}
+
